@@ -38,18 +38,6 @@ app.get('/product', async (req, res) => {
     const productId = extractProductIdFromAliExpressLink(link);
     console.log(productId);
     try {
-        // const response = await axios.get(link);
-        // // console.log(response.data);
-        // const $ = cheerio.load(response.data);
-
-        // const title = $('h1.product-title-text').text().trim();
-        // console.log(title);
-        // const price = $('span.product-price-value').text().trim();
-        // const description = $('div.product-description').text().trim();
-
-        // if (!title || !price || !description) {
-        //     throw new Error('Failed to extract product information');
-        // }
         async function AliexpressProductScraper(productId, feedbackLimit) {
             const FEEDBACK_LIMIT = feedbackLimit || 10;
             const browser = await puppeteer.launch();
