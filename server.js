@@ -10,15 +10,7 @@ const Feedback = require('./feedback');
 const app = express();
 
 
-// function extractProductIdFromAliExpressLink(link) {
-//     const parsedUrl = url.parse(link);
-//     const pathSegments = parsedUrl.pathname.split('/');
-//     const productIdIndex = pathSegments.findIndex(segment => segment === 'item');
-//     if (productIdIndex !== -1 && productIdIndex < pathSegments.length - 1) {
-//         return pathSegments[productIdIndex + 1];
-//     }
-//     return null;
-// }
+
 
 function extractProductIdFromAliExpressLink(link) {
     const parsedUrl = url.parse(link);
